@@ -9,7 +9,6 @@ async function globalTearDown() {
   } catch (err) {
     null;
   }
-
 }
 
 export default globalTearDown;

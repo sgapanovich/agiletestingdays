@@ -1,10 +1,10 @@
 ---
 - page: "/home"
   features:
-    room: 
+    room:
       image: true
       description: false
-      book this room: 
+      book this room:
         calendar: false
         first name: false
         last name: false
@@ -12,7 +12,7 @@
         phone: false
         book: false
         cancel: false
-    messages: 
+    messages:
       name: false
       email: false
       phone: false

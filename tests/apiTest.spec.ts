@@ -1,6 +1,6 @@
-import { test, expect, request } from '@playwright/test';
-import { createAssertions } from '../helpers/createAssertions';
-import { validateAgainstSchema } from '../helpers/schemaFunctions';
+import { test, expect, request } from "@playwright/test";
+import { createAssertions } from "../helpers/createAssertions";
+import { validateAgainstSchema } from "../helpers/schemaFunctions";
 
 test.describe("API testing", async () => {
   test("GET rooms", async ({ baseURL }) => {
@@ -32,13 +32,14 @@ test.describe("API testing", async () => {
 
   test("GET all countries", async () => {
     const getRequest = await request.newContext();
-    const response = await getRequest.get("https://restcountries.com/v3.1/translation/germany");
+    const response = await getRequest.get(
+      "https://restcountries.com/v3.1/translation/germany"
+    );
 
     // https://restcountries.com/v3.1/all
 
     expect(response.status()).toBe(200);
     const body = await response.json();
-    await createAssertions(body)
+    await createAssertions(body);
   });
-})
-
+});

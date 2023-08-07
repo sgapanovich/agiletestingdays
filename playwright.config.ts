@@ -1,7 +1,7 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   globalSetup: "./global-setup",
   globalTeardown: "./global-teardown",
   use: {
@@ -32,5 +32,3 @@ export default defineConfig({
   // reporter: 'html',
   forbidOnly: !!process.env.CI,
 });
-
-
