@@ -1,0 +1,26 @@
+---
+- page: "/home"
+  features:
+    room: 
+      image: true
+      description: false
+      book this room: 
+        calendar: false
+        first name: false
+        last name: false
+        email: false
+        phone: false
+        book: false
+        cancel: false
+    messages: 
+      name: false
+      email: false
+      phone: false
+      subject: false
+      message: false
+      submit: false
+      address: false
+- page: "/admin"
+  features:
+    successful login: true
+    invalid login: false

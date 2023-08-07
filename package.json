@@ -1,0 +1,16 @@
+{
+  "name": "atd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2",
+    "js-yaml": "^4.0.0",
+    "dotenv": "^10.0.0",
+    "prettier": "2.6.2"
+  }
+}
