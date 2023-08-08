@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { addWarning } from "../../helpers/warnings";
 
 test.describe("Custom warnings 50 tests", async () => {
   test("Test #1", async () => {
@@ -7,6 +8,13 @@ test.describe("Custom warnings 50 tests", async () => {
 
   test("Test #2", async () => {
     expect(2).toBe(2);
+
+    // adds a warning to the warnings.log and then console logs it after all tests are done running
+    await addWarning(
+      "Sergei, wake up, this test is not good: '" +
+        test.info().title +
+        "'. Please"
+    );
   });
 
   test("Test #3", async () => {
