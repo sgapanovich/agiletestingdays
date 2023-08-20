@@ -27,7 +27,7 @@ test.describe("UI check", () => {
     // with the modified response from before all
     await page.route("**/room/", (route) =>
       route.fulfill({
-        status: 500,
+        status: 200,
         body: JSON.stringify(rooms),
       })
     );

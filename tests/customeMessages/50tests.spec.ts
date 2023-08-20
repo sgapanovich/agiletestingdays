@@ -11,9 +11,7 @@ test.describe("Custom warnings 50 tests", async () => {
 
     // adds a warning to the warnings.log and then console logs it after all tests are done running
     await addWarning(
-      "Sergei, wake up, this test is not good: '" +
-        test.info().title +
-        "'. Please"
+      "Sergei, wake up, this test is not good: '" + test.info().title + "'"
     );
   });
 
@@ -23,6 +21,12 @@ test.describe("Custom warnings 50 tests", async () => {
 
   test("Test #4", async () => {
     expect(4).toBe(4);
+
+    await addWarning(
+      "Sergei, this test might need some help as well: '" +
+        test.info().title +
+        "'. Please, ask developers if they changed anything first"
+    );
   });
 
   test("Test #5", async () => {

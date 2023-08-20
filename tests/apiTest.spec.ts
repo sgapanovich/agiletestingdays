@@ -31,6 +31,17 @@ test.describe("API testing", async () => {
     );
   });
 
+  test("GET rooms", async ({ baseURL }) => {
+    const getRequest = await request.newContext();
+    const response = await getRequest.get(baseURL + "/room/", {});
+
+    expect(response.status()).toBe(200);
+    const body = await response.json();
+
+    // creates assertions and console logs them to the terminal
+    await createAssertions(body);
+  });
+
   test("GET countries", async () => {
     const getRequest = await request.newContext();
     const response = await getRequest.get(
